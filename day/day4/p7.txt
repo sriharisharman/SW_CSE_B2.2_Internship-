@@ -1,0 +1,12 @@
+CSS Selectors
+1. Type Selector/Element Selector
+2. class Selector
+3. Id Selector
+4. Universal Selector
+5. Grouping Selector
+6. Descendnt selector
+7. child selector
+8. sibling selector
+9. attribute selector
+10. pseudo-class selector
+11. pseuo-element selector
