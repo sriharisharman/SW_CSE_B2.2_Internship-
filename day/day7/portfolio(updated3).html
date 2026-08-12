@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Hari Sharma.N | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: #18212b;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        /* Background */
+        body::before {
+            content: "";
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: #2563eb;
+            filter: blur(150px);
+            opacity: 0.12;
+            top: -120px;
+            left: -120px;
+            z-index: -2;
+        }
+        body::after {
+            content: "";
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: #16a085;
+            filter: blur(150px);
+            opacity: 0.10;
+            bottom: -120px;
+            right: -120px;
+            z-index: -2;
+        }
+     /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 18px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            background: rgba(24, 33, 43, 0.94);
+
+            border-bottom: 1px solid #344454;
+
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2dd4bf;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+        nav ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #2dd4bf;
+        }
+        /* Home */
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 120px 10% 80px;
+        }
+        .hero-content {
+            max-width: 850px;
+
+            animation: appear 1s ease;
+        }
+        .welcome {
+            color: #2dd4bf;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .hero h1 {
+            font-size: 62px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .hero h1 span {
+            color: #60a5fa;
+        }
+        .hero h2 {
+            font-size: 26px;
+            font-weight: normal;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #b0bdca;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 13px 28px;
+            border: 1px solid #2dd4bf;
+            border-radius: 8px;
+            color: #2dd4bf;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #2dd4bf;
+            color: #18212b;
+            transform: translateY(-4px);
+        }
+        /* Common Sections */
+        section {
+            padding: 90px 10%;
+        }
+        .section-title {
+            font-size: 36px;
+            color: #60a5fa;
+            margin-bottom: 40px;
+            border-left: 4px solid #2dd4bf;
+            padding-left: 15px;
+        }
+        /* About */
+        .about {
+            max-width: 850px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid #344454;
+            padding: 30px;
+            border-radius: 12px;
+            color: #b0bdca;
+            font-size: 18px;
+            line-height: 1.8;
+            transition: 0.3s;
+        }
+
+        .about:hover {
+            border-color: #2dd4bf;
+        }
+        /* Skills */
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            padding: 14px 24px;
+            background: #202d3a;
+            border: 1px solid #3b4d5e;
+            border-radius: 8px;
+            color: #dbeafe;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background: #263746;
+            border-color: #2dd4bf;
+            color: #2dd4bf;
+            transform: translateY(-4px);
+        }
+
+        /* Projects */
+
+        .projects {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+        .project {
+            background: #202d3a;
+            border: 1px solid #3b4d5e;
+            padding: 28px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-6px);
+            border-color: #60a5fa;
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .project h3 {
+            color: #2dd4bf;
+            margin-bottom: 14px;
+            font-size: 21px;
+        }
+
+        .project p {
+            color: #b0bdca;
+            line-height: 1.7;
+        }
+
+        /* Education */
+
+        .education-box {
+            max-width: 750px;
+            padding: 30px;
+            background: #202d3a;
+            border: 1px solid #3b4d5e;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .education-box:hover {
+            border-color: #2dd4bf;
+            transform: translateY(-5px);
+        }
+
+        .education-box h3 {
+            color: #60a5fa;
+            margin-bottom: 12px;
+        }
+
+        .education-box p {
+            color: #b0bdca;
+            line-height: 1.8;
+        }
+
+        /* Contact */
+        .contact {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid #344454;
+            padding: 30px;
+            max-width: 750px;
+            border-radius: 12px;
+        }
+
+        .contact p {
+            color: #b0bdca;
+            margin: 12px 0;
+        }
+
+        .contact a {
+            color: #2dd4bf;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: #60a5fa;
+        }
+
+        .thank-you {
+            color: #b0bdca;
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #344454;
+            color: #718096;
+        }
+
+        /* Simple Animation */
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+
+        }
+        /* Mobile */
+
+        @media(max-width: 700px) {
+
+            nav {
+                padding: 16px 5%;
+            }
+
+            nav ul {
+                gap: 10px;
+                font-size: 11px;
+            }
+
+            .hero {
+                padding: 120px 7% 70px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            section {
+                padding: 70px 7%;
+            }
+
+            .section-title {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            SRI HARI
+        </div>
+        <ul>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+    <!-- Home -->
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="welcome">
+                WELCOME TO MY PORTFOLIO
+            </div>
+            <h1>
+                Hi, I'm
+                <span>Sri Hari Sharma.N</span>
+            </h1>
+            <h2>
+                Computer Science Engineering Student
+            </h2>
+            <p>
+                Welcome to my personal portfolio.
+                I am passionate about technology, programming,
+                web development and creating innovative solutions.
+            </p>
+            <a href="#projects" class="btn">
+                Explore My Work
+            </a>
+        </div>
+    </section>
+    <!-- About -->
+
+    <section id="about">
+        <h2 class="section-title">
+            About Me
+        </h2>
+        <div class="about">
+            <p>
+                I am a Computer Science Engineering student with an
+                interest in programming, web development and emerging
+                technologies. I enjoy learning new technical skills
+                and applying them through practical projects.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+
+    <section id="skills">
+        <h2 class="section-title">
+            My Skills
+        </h2>
+        <div class="skills-container">
+            <div class="skill">
+                HTML
+            </div>
+            <div class="skill">
+                CSS
+            </div>
+            <div class="skill">
+                JavaScript
+            </div>
+            <div class="skill">
+                Python
+            </div>
+            <div class="skill">
+                C Programming
+            </div>
+            <div class="skill">
+                Arduino
+            </div>
+        </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title">
+            My Projects
+        </h2>
+        <div class="projects">
+            <div class="project">
+                <h3>
+                    Air Defense System
+                </h3>
+                <p>
+                    An Arduino-based air defense system designed to
+                    detect and track objects using sensors and display
+                    the detected information through the system.
+                </p>
+            </div>
+            <div class="project">
+                <h3>
+                    Portfolio Website
+                </h3>
+
+                <p>
+                    A responsive personal portfolio website designed
+                    using HTML and CSS with modern styling effects.
+                </p>
+            </div>
+            <div class="project">
+                <h3>
+                    Python Programs
+                </h3>
+                <p>
+                    Collection of Python programming exercises including
+                    sorting, searching, recursion, matrices and
+                    mathematical operations.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Education -->
+    <section id="education">
+
+        <h2 class="section-title">
+            Education
+        </h2>
+        <div class="education-box">
+            <h3>
+                B.Tech – Computer Science Engineering
+            </h3>
+            <p>
+                M.S. Ramaiah University of Applied Sciences
+            </p>
+            <p>
+                Faculty of Engineering & Technology
+            </p>
+        </div>
+    </section>
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="section-title">
+            Contact Me
+        </h2>
+        <div class="contact">
+            <p>
+                Email:
+                <a href="mailto:YOUR_EMAIL@gmail.com">
+                    sriharisharma18@gmail.com
+                </a>
+            </p>
+        </div>
+        <p class="thank-you">
+            Thank you for visiting my portfolio.
+        </p>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 Sri Hari Sharma.N | Personal Portfolio
+        </p>
+    </footer>
+</body>
+</html>
