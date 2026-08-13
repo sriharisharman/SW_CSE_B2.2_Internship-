@@ -36,13 +36,13 @@ console.log(arr);
 
 // array length
 console.log("Array length")
-const arr1 = [100, 200, 300];
+const arr5 = [100, 200, 300];
 console.log(arr1.length);
-arr1.length = 2;
-console.log(arr1);
-arr1.length = 5;
-console.log(arr1);
-console.log(arr1.length);
+arr5.length = 2;
+console.log(arr5);
+arr5.length = 5;
+console.log(arr5);
+console.log(arr5.length);
 
 // Add and remove elements from an array
 console.log("adding or removing elements");
@@ -69,20 +69,20 @@ const copy2=[...a];
 console.log(copy2);
 
 console.log("Looping over Arrays");
-const arr5 = [111,222,333,444,555,666];
+const arr8 = [111,222,333,444,555,666];
 // for loop
-for (let i = 0; i < arr5.length; i++) {
-    console.log(i,arr5[i]);    
+for (let i = 0; i < arr8.length; i++) {
+    console.log(i,arr8[i]);    
 }
 
 // for ... of
 console.log("for ... of");
-for (const value of arr5){
+for (const value of arr8){
     console.log(value);    
 }
 
 console.log("for Each");
-arr5.forEach((value, index)=>{
+arr8.forEach((value, index)=>{
     console.log(index,value);
 })
 
