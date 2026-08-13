@@ -105,3 +105,16 @@ const user = users.find(student=>student.id === 2);
 console.log(user);
 const index = users.findIndex(student=>student.name === "Bipin");
 console.log(index);
+
+// transforming array
+// map
+const myarray2 = [10, 20, 30, 40, 50, 60, 70];
+const double = myarray2.map(n=>n*2);
+console.log(double);
+
+const greaterthan30=myarray2.filter(n=n=>30);
+console.log(greaterthan30);
+
+console.log("Reduce");
+const sumofarray=myarray2.reduce((acc, curr) =>acc+curr,10);
+console.log(sumofarray);
