@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors</title>
+</head>
+<body>
+
+    <p>1. By ID</p>
+    <p id="id-eg">Hello</p>
+
+    <p>2. By class</p>
+    <p class="class-eg">Namaste</p>
+
+    <h2>3. By tag name: Tag name is h2</h2>
+
+    <p class="query-selector">4. By CSS selectors</p>
+
+    <script>
+        // 1. Get element by ID
+        const el = document.getElementById("id-eg");
+        console.log(el.textContent);
+
+        // 2. Get elements by Class Name
+        const el1 = document.getElementsByClassName("class-eg");
+        console.log(el1.length); // Fixed to log 'el1' instead of 'el'
+
+        // 3. Get elements by Tag Name
+        const head2 = document.getElementsByTagName("h2");
+        console.log(head2.length);
+
+        // 4. Get element by Query Selector (Fixed: Added "." for class selector)
+        const qs = document.querySelector(".query-selector");
+        console.log(qs.textContent);
+    </script>
+</body>
+</html>
