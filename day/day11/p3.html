@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removing and Replacing the elements</title>
+</head>
+<body>
+    <ul id="list">
+        <li id="item1" class="item">item1</li>
+        <li id="item2" class="item">item2</li>
+        <li id="old" class="item">item3-to be deleted </li>
+        <li id="item4" class="item">item4</li>
+    </ul>
+    <button onclick="removeElement()">REMOVE Item: Remove function</button>
+    <button onclick="removeChildElement()">Remove Item: Remove Child()</button>
+    <button onclick="replaceElement()">Replace Item: Replace Child()</button>
+
+    <script>
+        function removeElement(){
+            const item = document.querySelector("#item1");
+            item.remove();
+        }
+        function removeChildElement(){
+            const parent = document.querySelector("#list");
+            const child = document.querySelector("#item2");
+            parent.removeChild(child);
+        }
+        function replaceElement(){
+            const parent = document.querySelector("#list");
+            const oldItem = document.querySelector("#old");
+            const newItem = document.createElement("li");
+            newItem.textContent = "New Item";
+            parent.replaceChild(newItem,oldItem);
+        }
+    </script>
+</body>
+</html>
