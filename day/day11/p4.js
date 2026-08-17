@@ -10,7 +10,7 @@ function shoowMessage(text){
     console.log(text);
     }
 
-    greet("Rakesh", shoowMessage);
+    greet("Hari", shoowMessage);
 
     // different types of callbacks
     // 1. Named function as callback
