@@ -8,7 +8,7 @@ function App() {
     <>
     <Welcome name ="SriHari"/>
     <ProductCard
-    name="Lenovo LOQ 2024, Intel Core i5-13450HX, 13th Gen"
+    
     price={125000}
     image={lenovo}
     />
