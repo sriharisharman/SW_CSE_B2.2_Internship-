@@ -4,11 +4,13 @@ import './App.css'
 import ButtonDemo from "./components/P3";
 import lenovo from "./assets/lenovo_loq_rtx_4050.jpg"
 import Counter from "./components/StateExampleOne";
+import ToggleText from "./components/StateExampleTwo";
 function App() {
   
   return (
     <>
     <Counter/>
+    <ToggleText/>
     <Welcome name ="SriHari"/>
     <ButtonDemo />
     <ProductCard
