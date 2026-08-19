@@ -3,10 +3,12 @@ import { ProductCard } from "./components/p2";
 import './App.css'
 import ButtonDemo from "./components/P3";
 import lenovo from "./assets/lenovo_loq_rtx_4050.jpg"
+import Counter from "./components/StateExampleOne";
 function App() {
   
   return (
     <>
+    <Counter/>
     <Welcome name ="SriHari"/>
     <ButtonDemo />
     <ProductCard
